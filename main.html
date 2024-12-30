@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fakéluxé Inc.</title>
+    <link rel="stylesheet" href="main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Top Navigation Bar -->
+    <nav class="top-nav">
+        <button class="menu-btn" aria-label="Toggle Sidebar">☰</button>
+        <div class="right-nav">
+            <div id="cart-icon" tabindex="0" role="button" aria-label="View Cart">
+                🛒
+                <span id="cart-count" class="badge">0</span>
+            </div>
+            <a href="#help" class="nav-link">Help</a>
+            <a href="#about" class="nav-link" id="about-link">About</a>
+            <a href="#tnc" class="nav-link" id="tnc-link">T&C</a>
+
+        </div>
+    </nav>
+
+    <!-- about Modal -->
+    <div id="aboutModal" class="modal" role="dialog" aria-labelledby="aboutTitle" aria-hidden="true">
+        <div class="modal-content">
+            <h2 id="aboutTitle">About</h2>
+            <div class="modal-body">
+                <p style="font-size: 28px;">Welcome to our store! We are dedicated to providing the best shopping
+                    experience for our customers.
+                </p>
+                <p style="font-size: 25px;">Our mission is to deliver high-quality products at competitive prices while
+                    ensuring excellent
+                    customer service.</p>
+                <p style="text-align: center; margin-top: 20px;">For detailed information, click here <a
+                        href="about.html" style="color: #0066cc; text-decoration: underline;">About</a></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Help Modal -->
+    <div id="helpModal" class="modal" role="dialog" aria-labelledby="helpTitle" aria-hidden="true">
+        <div class="modal-content">
+            <h2 id="helpTitle">Help</h2>
+            <div class="modal-body">
+                <p style="font-size: 20px; margin-bottom: 20px;">Need assistance with our services? We're here to help
+                    you with any questions or concerns you may have.</p>
+                <p style="font-size: 25px; margin-bottom: 20px;">Quick Links:</p>
+                <div
+                    style="font-size: 23px;display: grid; grid-template-columns: 1fr 1fr; gap: 20px; max-width: 800px;">
+                    <ul style="list-style: none; padding: 0;">
+                        <li style="margin: 10px 0;"><a href="help.html#account-login">Account & Login</a></li>
+                        <li style="margin: 10px 0;"><a href="help.html#shopping-orders">Shopping & Orders</a></li>
+                        <li style="margin: 10px 0;"><a href="help.html#payment-billing">Payment & Billing</a></li>
+                        <li style="margin: 10px 0;"><a href="help.html#shipping-delivery">Shipping & Delivery</a></li>
+                    </ul>
+                    <ul style="list-style: none; padding: 0;">
+                        <li style="margin: 10px 0;"><a href="help.html#returns-exchanges">Returns & Exchanges</a></li>
+                        <li style="margin: 10px 0;"><a href="help.html#product-information">Product Information</a></li>
+                        <li style="margin: 10px 0;"><a href="help.html#gift-cards-vouchers">Gift Cards & Vouchers</a>
+                        </li>
+                        <li style="margin: 10px 0;"><a href="help.html#customer-support">Customer Support</a></li>
+                    </ul>
+                </div>
+                <p style="text-align: center; margin-top: 20px;">For detailed information, click here <a
+                        href="help.html">Help Center</a></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- T&C Modal -->
+    <div id="tncModal" class="modal" role="dialog" aria-labelledby="tncTitle" aria-hidden="true">
+        <div class="modal-content">
+            <h2 id="tncTitle">Terms & Conditions</h2>
+            <div class="modal-body">
+                <p style="font-size: 25px; margin-bottom: 20px;">Last updated: November 21 2024 </p>
+                <p style="font-size: 25px; margin-bottom: 20px;">
+                    By accessing and using our website, you agree to comply with
+                    and be bound by the following terms and conditions.
+                    Please read them carefully before using our services.
+                    If you do not agree with these terms, you may not use our website or services.</p>
+                <p style="text-align: center; margin-top: 20px;">For more information, click here <a href="tc.html"
+                        style="color: #0066cc; text-decoration: underline;">Terms & Conditions</a></p>
+            </div>
+        </div>
+    </div>
+    <!-- Privacy Policy Modal -->
+    <div id="privacyModal" class="modal" role="dialog" aria-labelledby="privacyTitle" aria-hidden="true">
+        <div class="modal-content">
+            <h2 id="privacyTitle">Privacy Policy</h2>
+            <div class="modal-body">
+                <p>Your privacy is important to us. This policy explains how we handle your personal information.</p>
+                <p style="text-align: center; margin-top: 20px;">For detailed information, click here <a
+                        href="privacy.html" style="color: #0066cc; text-decoration: underline;">Privacy Policy</a></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Sidebar -->
+    <aside id="mySidebar" class="sidebar">
+        <button class="close-btn" aria-label="Close Sidebar">×</button>
+        <div class="sidebar-content">
+            <div class="profile-section">
+                <img src="image/default_profilePIC.png" alt="Profile Picture" class="profile-img">
+                <h3 id="display-name">User Name</h3>
+            </div>
+            <nav style="font-size: 20px;margin-top: 10px;" class="sidebar-links">
+                <a href="main.html">Home</a>
+                <a href="profile.html">Profile</a>
+                <a href="car.html">Car Model</a>
+                <a href="accesories.html">Accessories</a>
+                <a href="merchandise.html">Merchandise</a>
+                <a href="settings.html">Settings</a>
+                <a href="#" id="logout-button">Logout</a>
+            </nav>
+        </div>
+    </aside>
+    <!-- Welcome Section -->
+    <header class="welcome-section">
+        <h1 class="animated-text" style="font-size: 120px;font-family: garamond;">Welcome to Fakéluxé<h1>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <section class="search-section">
+            <div class="search-container">
+                <input type="search" placeholder="Search products..." class="search-bar" id="searchBar"
+                    aria-label="Search">
+                <div class="filter-container">
+                    <select id="categoryFilter">
+                        <option value="">All Categories</option>
+                        <option value="car">Car Models</option>
+                        <option value="accessories">Accessories</option>
+                    </select>
+                    <select id="priceFilter">
+                        <option value="">Price Range</option>
+                        <option value="0-100">$0 - $100</option>
+                        <option value="100-200">$100 - $200</option>
+                        <option value="200+">$200+</option>
+                    </select>
+                </div>
+            </div>
+        </section>
+
+        <!-- Products Section -->
+        <section class="products-section">
+            <h2>Product Categories</h2>
+            <div class="products-grid">
+                <!-- Product Cards -->
+                <div class="product-categories car">
+                    <img src="https://th.bing.com/th/id/OIP.hueKj4ipbNdf-pdG_dt6xQHaE8?rs=1&pid=ImgDetMain"
+                        style="height:230px;width:340px;" alt="Car Model" class="product-image">
+                    <h3>Lesta Model</h3>
+                    <p>Over 4 different Models! And also colour to choose from!</p>
+                    <button type="button" onclick="document.location='car.html'">Check It Out!</button>
+                </div>
+                <div class="product-categories accessories">
+                    <img src="https://th.bing.com/th/id/OIP.dzIkIB2jndNk6mxc2q8qmQHaDt?rs=1&pid=ImgDetMain"
+                        style="height:230px;width:340px;" alt="Accessories" class="product-image">
+                    <h3>Accessories</h3>
+                    <p>Upgrade your ride! Boost comfort, style, protection, and performance!
+                    </p>
+                    <button type="button" onclick="document.location='accesories.html'">Check It Out!</button>
+                </div>
+                <div class="product-categories">
+                    <img src="https://cdn.shopify.com/s/files/1/0190/4948/0292/products/TSL84003_250x250@2x.jpg?v=1592956221"
+                        style="height:230px;width:340px;""
+                        alt=" Product 3" class="product-image">
+                    <h3>Merchandise</h3>
+                    <p>Drive in style, wear it and get it — car merch awaits!</p>
+                    <button type="button" onclick="document.location='merchandise.html'">Check It Out!</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Cart Dropdown -->
+        <div id="cartDropdown" class="section cart-dropdown" hidden="">
+            <h3>Your Cart</h3>
+            <ul id="cartItems">
+                <!-- Cart items will be dynamically added here -->
+            </ul>
+            <button class="checkout-btn">Checkout</button> <!-- Added class here -->
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Fakéluxé Inc. All rights reserved.</p>
+        <a href="#" id="privacyPolicy">Privacy Policy</a>
+    </footer>
+
+    <!-- JavaScript -->
+    <script type="module" src="main.js"></script>
+</body>
+
+</html>

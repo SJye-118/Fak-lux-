@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fexla Merchandise</title>
+    <link rel="stylesheet" href="main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Top Navigation Bar -->
+    <nav class="top-nav">
+        <button class="menu-btn" aria-label="Toggle Sidebar">☰</button>
+        <div class="right-nav">
+            <div id="cart-icon" tabindex="0" role="button" aria-label="View Cart">
+                🛒
+                <span id="cart-count" class="badge">0</span>
+            </div>
+            <a href="#help" class="nav-link">Help</a>
+            <a href="#about" class="nav-link" id="about-link">About</a>
+            <a href="#tnc" class="nav-link" id="tnc-link">T&C</a>
+
+        </div>
+    </nav>
+
+    <!-- Sidebar -->
+    <aside id="mySidebar" class="sidebar">
+        <button class="close-btn" aria-label="Close Sidebar">×</button>
+        <div class="sidebar-content">
+            <div class="profile-section">
+                <img src="image/default_profilePIC.png" alt="Profile Picture" class="profile-img">
+                <h3 id="display-name">User Name</h3>
+            </div>
+            <nav style="font-size: 20px;margin-top: 10px;" class="sidebar-links">
+                <a href="main.html">Home</a>
+                <a href="profile.html">Profile</a>
+                <a href="car.html">Car Model</a>
+                <a href="accesories.html">Accessories</a>
+                <a href="merchandise.html">Merchandise</a>
+                <a href="settings.html">Settings</a>
+                <a href="#" id="logout-button">Logout</a>
+            </nav>
+        </div>
+    </aside>
+
+    <!-- about Modal -->
+    <div id="aboutModal" class="modal" role="dialog" aria-labelledby="aboutTitle" aria-hidden="true">
+        <div class="modal-content">
+            <h2 id="aboutTitle">About</h2>
+            <div class="modal-body">
+                <p>Welcome to our store! We are dedicated to providing the best shopping experience for our customers.
+                </p>
+                <p>Our mission is to deliver high-quality products at competitive prices while ensuring excellent
+                    customer service.</p>
+                <p style="text-align: center; margin-top: 20px;">For detailed information, click here <a
+                        href="about.html" style="color: #0066cc; text-decoration: underline;">About</a></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Help Modal -->
+    <div id="helpModal" class="modal" role="dialog" aria-labelledby="helpTitle" aria-hidden="true">
+        <div class="modal-content">
+            <!-- <button class="modal-close" aria-label="Close Help Modal">&times;</button>-->
+            <h2 id="helpTitle">Help</h2>
+            <div class="modal-body">
+                <p style="font-size: 20px; margin-bottom: 20px;">Need assistance with our services? We're here to help
+                    you with any questions or concerns you may have.</p>
+                <p style="font-size: 25px; margin-bottom: 20px;">Quick Links:</p>
+                <div
+                    style="font-size: 23px;display: grid; grid-template-columns: 1fr 1fr; gap: 20px; max-width: 800px;">
+                    <ul style="list-style: none; padding: 0;">
+                        <li style="margin: 10px 0;"><a href="help.html#account-login">Account & Login</a></li>
+                        <li style="margin: 10px 0;"><a href="help.html#shopping-orders">Shopping & Orders</a></li>
+                        <li style="margin: 10px 0;"><a href="help.html#payment-billing">Payment & Billing</a></li>
+                        <li style="margin: 10px 0;"><a href="help.html#shipping-delivery">Shipping & Delivery</a></li>
+                    </ul>
+                    <ul style="list-style: none; padding: 0;">
+                        <li style="margin: 10px 0;"><a href="help.html#returns-exchanges">Returns & Exchanges</a></li>
+                        <li style="margin: 10px 0;"><a href="help.html#product-information">Product Information</a></li>
+                        <li style="margin: 10px 0;"><a href="help.html#gift-cards-vouchers">Gift Cards & Vouchers</a>
+                        </li>
+                        <li style="margin: 10px 0;"><a href="help.html#customer-support">Customer Support</a></li>
+                    </ul>
+                </div>
+                <p style="text-align: center; margin-top: 20px;">For detailed information, click here <a
+                        href="help.html">Help Center</a></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- T&C Modal -->
+    <div id="tncModal" class="modal" role="dialog" aria-labelledby="tncTitle" aria-hidden="true">
+        <div class="modal-content">
+            <h2 id="tncTitle">Terms & Conditions</h2>
+            <div class="modal-body">
+                <p style="font-size: 25px; margin-bottom: 20px;">Last updated: November 21 2024 </p>
+                <p style="font-size: 25px; margin-bottom: 20px;">
+                    By accessing and using our website, you agree to comply with
+                    and be bound by the following terms and conditions.
+                    Please read them carefully before using our services.
+                    If you do not agree with these terms, you may not use our website or services.</p>
+                <p style="text-align: center; margin-top: 20px;">For more information, click here <a href="tc.html"
+                        style="color: #0066cc; text-decoration: underline;">Terms & Conditions</a></p>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <main>
+        <section class="products-section">
+            <h2 class="animated-text">Merchandise</h2>
+            <div class="products-grid">
+                <!-- Product Cards -->
+                <div class="product-card">
+                    <img src="https://digitalassets-shop.tesla.com/image/upload/f_auto,q_auto/v1/content/dam/tesla/mpos/nav-tiles/FeaturedNavMPOS_1655475-00-A.jpg"
+                        alt="Product 2" class="product-image">
+                    <h3>Tesla Liquor Bottle w/ Stand & Box</h3>
+                    <p>$999.99</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <img src="https://th.bing.com/th/id/OIP.ShGpi5KG8wY4kLG6OGreigHaHa?rs=1&pid=ImgDetMain"
+                        alt="Product 2" class="product-image">
+                    <h3>Tesla Baseball Cap</h3>
+                    <p>$149.99</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <img src="https://th.bing.com/th/id/OIP.bKWgToKt7diVYPi6d6AFjQHaHa?rs=1&pid=ImgDetMain"
+                        alt="Product 2" class="product-image">
+                    <h3>Tesla Water Bottle</h3>
+                    <p>$109.99</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <img src="https://ae01.alicdn.com/kf/H7e28e1945f7f404b9700a24f4a4651a06.jpg_640x640.jpg"
+                        alt="Product 2" class="product-image">
+                    <h3>Tesla Tech Hoodie</h3>
+                    <p>$129.99</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <img src="https://res.cloudinary.com/teepublic/image/private/s--RBYEDcxi--/c_scale,h_608/c_lpad,g_north_west,h_801,w_1802,x_216,y_96/c_crop,h_801,w_691,x_125/c_mfit,g_north_west,u_misc:Mug%20Effect%20Coffee3%20Left/e_displace,fl_layer_apply,x_14,y_-2/c_mfit,g_north_east,u_misc:Mug%20Effect%20Coffee3%20Right/e_displace,fl_layer_apply,x_-14,y_-2/c_crop,h_801,w_656/g_north_west,l_upload:v1466696262:production:blanks:w00xdkhjelyrnp8i8wxr,x_-410,y_-235/b_rgb:ffffff/c_limit,f_jpg,h_630,q_90,w_630/v1483104947/production/designs/1006816_1.jpg"
+                        alt="Product 2" class="product-image">
+                    <h3>Tesla Mug</h3>
+                    <p>$129.99</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <img src="https://images-na.ssl-images-amazon.com/images/I/61yUpNe0OfL._UL1200_.jpg" alt="Product 1"
+                        class="product-image">
+                    <h3>Tesla Logo T-Shirt</h3>
+                    <p>$99.99</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+
+                <div class="product-card">
+                    <img src="https://ih1.redbubble.net/image.465398774.6068/throwpillow,small,600x-bg,f8f8f8-c,0,120,600,600.jpg"
+                        alt="Product 2" class="product-image">
+                    <h3>Tesla Pillow</h3>
+                    <p>$39.99</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <img src="https://ih1.redbubble.net/image.492100653.3114/drawstring_bag,x600-pad,600x600,f8f8f8.u2.jpg"
+                        alt="Product 2" class="product-image">
+                    <h3>Tesla Bag</h3>
+                    <p>$159.99</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+        </section>
+        <!-- Cart Dropdown -->
+        <div id="cartDropdown" class="section cart-dropdown" hidden="">
+            <h3>Your Cart</h3>
+            <ul id="cartItems">
+                <!-- Cart items will be dynamically added here -->
+            </ul>
+            <button class="checkout-btn">Checkout</button> <!-- Added class here -->
+        </div>
+    </main>
+    <!-- JavaScript -->
+    <script type="module" src="main.js"></script>
+</body>
+
+</html>

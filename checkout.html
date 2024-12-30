@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout</title>
+    <link rel="stylesheet" href="checkout.css">
+</head>
+
+<body class="checkout-body">
+    <div class="checkout-container">
+        <!-- Order Summary Card -->
+        <div class="checkout-card">
+            <!-- Header Section -->
+            <header class="checkout-header">
+                <div>
+                    <h1 class="checkout-title">Order Details</h1>
+                    <p class="order-number" id="order-number">Order #</p>
+                </div>
+                <div class="receipt-icon" aria-label="Receipt Icon">
+                    <svg width="32" height="32" fill="currentColor" xmlns="http://www.w3.org/2000/svg" role="img"
+                        aria-hidden="true">
+                        <path
+                            d="M13 2L6 7v13l7 5 7-5V7l-7-5zm6.12 18.88l-.88.88L13 19.12l-5.24 4.64-.88-.88L12.12 18 6.88 12.88l.88-.88L13 16.88l5.24-4.64.88.88L13.88 18l5.24 4.88z" />
+                    </svg>
+                </div>
+            </header>
+
+            <!-- Items List Section -->
+            <section class="checkout-items">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Item</th>
+                            <th>Qty</th>
+                            <th>Price</th>
+                            <th>Total</th>
+                        </tr>
+                    </thead>
+                    <tbody id="cart-items">
+                        <!-- Cart items will be dynamically populated here -->
+                    </tbody>
+                </table>
+            </section>
+
+            <!-- Summary Section -->
+            <section class="checkout-summary">
+                <div class="summary-row">
+                    <span>Subtotal</span>
+                    <span id="subtotal">$0.00</span>
+                </div>
+                <div class="summary-row">
+                    <span>Tax (99%)</span>
+                    <span id="tax">$0.00</span>
+                </div>
+                <div class="summary-row total">
+                    <strong>Total</strong>
+                    <strong id="total">$0.00</strong>
+                </div>
+            </section>
+
+            <!-- Add this in checkout.html before the Actions Section -->
+            <div class="delivery-section">
+                <h2>Delivery Information</h2>
+                <div class="delivery-form">
+                    <div class="form-group">
+                        <label for="address">Street Address</label>
+                        <input type="text" id="address" name="address" required>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="postcode">Postcode</label>
+                            <input type="text" id="postcode" name="postcode" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="city">City</label>
+                            <input type="text" id="city" name="city" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="country">Country</label>
+                        <select id="country" name="country" required>
+                            <option value="">Select Country</option>
+                            <option value="MY">Malaysia</option>
+                            <option value="SG">Singapore</option>
+                            <option value="TH">Thailand</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Actions Section -->
+        <div class="checkout-actions">
+            <button id="confirm-payment" class="btn btn-green" aria-label="Confirm and Pay">Confirm Order</button>
+            <button id="back-to-cart" class="btn btn-gray" aria-label="Return to Shopping Cart">Back to
+                Cart</button>
+        </div>
+    </div>
+    </div>
+
+    <!-- Toast Notifications -->
+    <div id="toast-container"></div>
+
+    <!-- Include Checkout Script -->
+    <script type="module" src="checkout.js"></script>
+</body>
+
+</html>

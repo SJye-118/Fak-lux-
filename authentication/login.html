@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="login.css">
+    <script type="module" src="login.js" defer></script>
+</head>
+
+<body>
+    <!-- Browse as Guest (right corner) -->
+    <div class="guest-option">
+        <i class="fas fa-user-circle"></i> 
+        <a href="../main.html" id="guest-link">Browse as Guest</a>
+        <img src="../guest.png" alt="Guest Icon" class="guest-icon">
+    </div>
+
+    <div class="login-container">
+        <h2>Login</h2>
+        <form id="loginForm" action="../main.html" method="POST">
+            <div class="input-group">
+                <label for="email">Email</label>
+                <input type="email" id="login-email" name="email" placeholder="Enter your email" required>
+            </div>
+            <div class="input-group">
+                <label for="password">Password</label>
+                <input type="password" id="login-password" name="password" placeholder="Enter your password" required>
+            </div>
+            <button type="submit" id="login-button">Login</button>
+        </form>
+
+        <div class="footer-links">
+            <a href="signup_page.html">Sign Up</a> | <a href="password_reset.html">Forgot Password?</a>
+        </div>
+    </div>
+
+    
+    <script>
+        // Simple visual effect on form elements when interacting
+        document.querySelectorAll('input').forEach(input => {
+            input.addEventListener('focus', function () {
+                this.style.borderColor = '#333';
+            });
+            input.addEventListener('blur', function () {
+                this.style.borderColor = '#ccc';
+            });
+        });
+
+        // Button click effect (hover scale)
+        const button = document.querySelector('button');
+        button.addEventListener('mouseover', function () {
+            this.style.transform = 'scale(1.05)';
+        });
+        button.addEventListener('mouseout', function () {
+            this.style.transform = 'scale(1)';
+        });
+
+        // Guest Browse Navigation
+        document.getElementById('guest-link').addEventListener('click', function (e) {
+            e.preventDefault();
+            // Redirect to main.html as a guest
+            window.location.href = "../main.html";
+        });
+    </script>
+</body>
+
+</html>

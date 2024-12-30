@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Help Center</title>
+    <link rel="stylesheet" href="main.css">
+    <style>
+        /* Help Center specific styles */
+        .help-section {
+            scroll-margin-top: 150px;
+            background: white;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .table-of-contents {
+            position: flex;
+            top: 80px;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+            max-height: calc(100vh - 100px);
+            /* Viewport height minus some spacing */
+            overflow-y: auto;
+        }
+
+        .table-of-contents ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .table-of-contents li {
+            margin: 10px 0;
+        }
+
+        .table-of-contents a {
+            color: #333;
+            text-decoration: none;
+            display: block;
+            padding: 8px 15px;
+            border-radius: 4px;
+            transition: background-color 0.3s ease;
+        }
+
+        .table-of-contents a:hover {
+            background-color: #f5f5f5;
+            color: #0066cc;
+        }
+
+        .help-section strong {
+            display: block;
+            margin-top: 20px;
+            color: #333;
+            font-size: 1.1em;
+        }
+
+        .help-section p {
+            margin: 10px 0;
+            line-height: 1.6;
+            color: #666;
+        }
+
+        main {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .welcome-message {
+            text-align: center;
+            margin: 40px 0;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Smooth scrolling for anchor links */
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+
+
+    <title>Help</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+    <nav class="top-nav">
+        <div class="left-nav">
+            <a href="main.html" class="nav-link" target="_self" style="color: white; ;">Home</a>
+        </div>
+        <div class="right-nav">
+            <h3 style="color: white;font-family:Garamond;margin-left: 10px;">Fakéluxé</h3>
+        </div>
+    </nav>
+    <br>
+    <h1 style="text-align: center;">Welcome to our Help Center!</h1>
+    <br>
+    <h5 style="text-align: center; color: #777;">Here, you can find answers to frequently asked
+        questions,useful tips, and guidance on how to make the most of your shopping experience.
+        If you need further assistance, feel free to contact our support team.</h5>
+    <!--<h2>1.Account & Login</h2>
+        <h3 style="">How do I create an account?</h3>
+        <h3 style="left: 50px;">How do I reset my password?</h3>
+        <h3 style="left: 50px;">How can I update my profile information?</h3>-->
+    <main>
+        <div class="table-of-contents">
+            <h2>Table of Contents:</h2>
+            <ul>
+                <li><a href="#account-login"><b>1. Account & Login</b></a></li>
+                <li><a href="#shopping-orders"><b>2. Shopping & Orders</b></a></li>
+                <li><a href="#payment-billing"><b>3. Payment & Billing</b></a></li>
+                <li><a href="#shipping-delivery"><b>4. Shipping & Delivery</b></a></li>
+                <li><a href="#returns-exchanges"><b>5. Returns & Exchanges</b></a></li>
+                <li><a href="#product-information"><b>6. Product Information</b></a></li>
+                <li><a href="#gift-cards-vouchers"><b>7. Gift Cards & Vouchers</b></a></li>
+                <li><a href="#customer-support"><b>8. Customer Support</b></a></li>
+            </ul>
+        </div>
+        <!-- Account & Login Section -->
+        <div id="account-login" class="help-section">
+            <h2>1. Account & Login</h2>
+            <div>
+                <strong>How do I create an account?</strong>
+                <p>To create an account, click on the "Sign Up" button at the top right of the page. Fill in your
+                    details, including name, email address, and password, then click "Create Account." You'll
+                    receive a
+                    confirmation email to verify your email address.</p>
+            </div>
+            <div>
+                <strong>How do I reset my password?</strong>
+                <p>If you've forgotten your password, go to the login page and click on "Forgot Password." Enter
+                    your
+                    email address, and we’ll send you instructions to reset your password.</p>
+            </div>
+            <div>
+                <strong>How can I update my profile information?</strong>
+                <p>Log into your account and navigate to "My Account." You can update your name, email, shipping
+                    address, and payment methods from there.</p>
+            </div>
+        </div>
+
+        <!-- Shopping & Orders Section -->
+        <div id="shopping-orders" class="help-section">
+            <h2>2. Shopping & Orders</h2>
+            <div>
+                <strong>How do I browse and search for products?</strong>
+                <p>You can browse our products by category using the navigation menu. Alternatively, use the search
+                    bar
+                    at the top of the page to find specific items. You can filter results by size, color, price, and
+                    more.</p>
+            </div>
+            <div>
+                <strong>How do I add items to my cart?</strong>
+                <p>Simply click on a product to view more details. From the product page, select your desired size
+                    and
+                    color (if applicable), and then click "Add to Cart."</p>
+            </div>
+            <div>
+                <strong>How can I apply a discount code?</strong>
+                <p>On the checkout page, you’ll see a field labeled "Discount Code" or "Promo Code." Enter your code
+                    and
+                    click "Apply" to have the discount reflected in your total.</p>
+            </div>
+            <div>
+                <strong>What should I do if my order is missing items?</strong>
+                <p>If your order arrives with missing items, please contact our support team immediately at
+                    <b>fakeluxesupport@luxe.gmail.com</b> or via the "Contact Us" page.
+                </p>
+            </div>
+            <div>
+                <strong>Can I modify or cancel my order after placing it?</strong>
+                <p>Once an order is placed, it is processed quickly to ensure fast shipping. Unfortunately, we
+                    cannot
+                    make changes or cancellations once an order is confirmed. However, you can return most items for
+                    a
+                    refund or exchange.</p>
+            </div>
+        </div>
+
+        <!-- Payment & Billing Section -->
+        <div id="payment-billing" class="help-section">
+            <h2>3. Payment & Billing</h2>
+            <div>
+                <strong>What payment methods do you accept?</strong>
+                <p>We accept major credit and debit cards (Visa, MasterCard, American Express), PayPal, and Apple
+                    Pay.
+                </p>
+            </div>
+            <div>
+                <strong>How can I add or update my payment method?</strong>
+                <p>You can update your payment method in your account under "Payment Methods." Add a new card or
+                    remove
+                    an old one.</p>
+            </div>
+            <div>
+                <strong>Is my payment information secure?</strong>
+                <p>Yes! We use SSL encryption to ensure that your payment information is securely transmitted. Our
+                    payment processing is compliant with the latest security standards.</p>
+            </div>
+            <div>
+                <strong>Can I use multiple payment methods in one order?</strong>
+                <p>Currently, we only accept one payment method per order.</p>
+            </div>
+        </div>
+
+        <!-- Shipping & Delivery Section -->
+        <div id="shipping-delivery" class="help-section">
+            <h2>4. Shipping & Delivery</h2>
+            <div>
+                <strong>How much is shipping?</strong>
+                <p>Shipping costs depend on your location and the shipping method you choose. You can view shipping
+                    fees
+                    at checkout before finalizing your order.</p>
+            </div>
+            <div>
+                <strong>How long will it take to receive my order?</strong>
+                <p>Standard shipping typically takes 5-7 business days. Expedited shipping options are available
+                    during
+                    checkout for faster delivery.</p>
+            </div>
+            <div>
+                <strong>Can I track my order?</strong>
+                <p>Once your order has shipped, you’ll receive an email with a tracking number. You can track your
+                    package through our carrier’s website.</p>
+            </div>
+            <div>
+                <strong>Do you ship internationally?</strong>
+                <p>Yes, we offer international shipping to select countries. Shipping rates and delivery times vary
+                    by
+                    location.</p>
+            </div>
+            <div>
+                <strong>What happens if my order is delayed or lost?</strong>
+                <p>If your order is delayed or lost, please contact us immediately. We will assist you in tracking
+                    the
+                    package or issuing a replacement.</p>
+            </div>
+        </div>
+
+        <!-- Returns & Exchanges Section -->
+        <div id="returns-exchanges" class="help-section">
+            <h2>5. Returns & Exchanges</h2>
+            <div>
+                <strong>What is your return policy?</strong>
+                <p>We accept returns within 30 days of receipt for most items. To qualify for a return, the product
+                    must
+                    be unused, in its original packaging, and with the receipt.</p>
+            </div>
+            <div>
+                <strong>How do I initiate a return or exchange?</strong>
+                <p>Visit our "Returns & Exchanges" page, where you can complete a return request form. We’ll provide
+                    you
+                    with instructions on how to send back the item.</p>
+            </div>
+            <div>
+                <strong>How long do I have to return an item?</strong>
+                <p>Returns must be initiated within 30 days of receiving your order.</p>
+            </div>
+            <div>
+                <strong>Can I return sale or clearance items?</strong>
+                <p>Sale or clearance items are generally final sale, but please check the specific product page for
+                    any
+                    exceptions.</p>
+            </div>
+        </div>
+
+        <!-- Product Information Section -->
+        <div id="product-information" class="help-section">
+            <h2>6. Product Information</h2>
+            <div>
+                <strong>How do I know if a product is in stock?</strong>
+                <p>If a product is out of stock, the website will display a "Sold Out" label on the product page.
+                    You
+                    can sign up to receive an email notification when the item is back in stock.</p>
+            </div>
+            <div>
+                <strong>What should I do if an item is out of stock?</strong>
+                <p>You can check back later or sign up to be notified when the product becomes available again.</p>
+            </div>
+            <div>
+                <strong>How do I get more details about a product?</strong>
+                <p>Each product page contains detailed descriptions, sizing information, and high-quality images. If
+                    you
+                    need further assistance, you can contact us directly.</p>
+            </div>
+        </div>
+
+        <!-- Gift Cards & Vouchers Section -->
+        <div id="gift-cards-vouchers" class="help-section">
+            <h2>7. Gift Cards & Vouchers</h2>
+            <div>
+                <strong>How do I purchase a gift card?</strong>
+                <p>To buy a gift card, visit our "Gift Cards" page and select the amount you’d like to purchase. You
+                    can
+                    send it to the recipient via email or have it delivered to you.</p>
+            </div>
+            <div>
+                <strong>How do I redeem a gift card or voucher?</strong>
+                <p>During checkout, enter the gift card or voucher code in the "Apply Discount" section, and the
+                    value
+                    will be deducted from your order total.</p>
+            </div>
+            <div>
+                <strong>Can I use a gift card on sale items?</strong>
+                <p>Yes, gift cards can be used on sale items unless stated otherwise in the terms and conditions.
+                </p>
+            </div>
+        </div>
+
+        <!-- Customer Support Section -->
+        <div id="customer-support" class="help-section">
+            <h2>8. Customer Support</h2>
+            <div>
+                <strong>How can I contact customer support?</strong>
+                <p>You can reach our customer support team by email at <b>fakeluxesupport@luxe.gmail.com</b> or by using
+                    our
+                    live
+                    chat
+                    feature on the website.</p>
+            </div>
+            <div>
+                <strong>What are your support hours?</strong>
+                <p>Our support team is available Monday to Friday, 9:00 AM - 5:00 PM (EST). We aim to respond to all
+                    inquiries within 24 hours.</p>
+            </div>
+            <div>
+                <strong>How can I report an issue with my order?</strong>
+                <p>If you encounter an issue with your order, please contact us immediately with your order number
+                    and a
+                    description of the issue. We will do our best to resolve it as quickly as possible.</p>
+            </div>
+        </div>
+        <a href="#"
+            style="background-color: #333; color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px;">Back
+            to Top</a>
+        </div>
+    </main>
+</body>
+
+</html>

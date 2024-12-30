@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern E-commerce Site</title>
+    <link rel="stylesheet" href="main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Top Navigation Bar -->
+    <nav class="top-nav">
+        <button class="menu-btn" aria-label="Toggle Sidebar">☰</button>
+        <div class="right-nav">
+            <div id="cart-icon" tabindex="0" role="button" aria-label="View Cart">
+                🛒
+                <span id="cart-count" class="badge">0</span>
+            </div>
+            <a href="#help" class="nav-link">Help</a>
+            <a href="#about" class="nav-link" id="about-link">About</a>
+            <a href="#tnc" class="nav-link" id="tnc-link">T&C</a>
+        </div>
+    </nav>
+
+    <!-- about Modal -->
+    <div id="aboutModal" class="modal" role="dialog" aria-labelledby="aboutTitle" aria-hidden="true">
+        <div class="modal-content">
+            <h2 id="aboutTitle">About</h2>
+            <div class="modal-body">
+                <p>Welcome to our store! We are dedicated to providing the best shopping experience for our customers.
+                </p>
+                <p>Our mission is to deliver high-quality products at competitive prices while ensuring excellent
+                    customer service.</p>
+                <p style="text-align: center; margin-top: 20px;">For detailed information, click here <a
+                        href="about.html" style="color: #0066cc; text-decoration: underline;">About</a></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Help Modal -->
+    <div id="helpModal" class="modal" role="dialog" aria-labelledby="helpTitle" aria-hidden="true">
+        <div class="modal-content">
+            <!-- <button class="modal-close" aria-label="Close Help Modal">&times;</button>-->
+            <h2 id="helpTitle">Help</h2>
+            <div class="modal-body">
+                <p style="font-size: 20px; margin-bottom: 20px;">Need assistance with our services? We're here to help
+                    you with any questions or concerns you may have.</p>
+                <p style="font-size: 25px; margin-bottom: 20px;">Quick Links:</p>
+                <div
+                    style="font-size: 23px;display: grid; grid-template-columns: 1fr 1fr; gap: 20px; max-width: 800px;">
+                    <ul style="list-style: none; padding: 0;">
+                        <li style="margin: 10px 0;"><a href="help.html#account-login">Account & Login</a></li>
+                        <li style="margin: 10px 0;"><a href="help.html#shopping-orders">Shopping & Orders</a></li>
+                        <li style="margin: 10px 0;"><a href="help.html#payment-billing">Payment & Billing</a></li>
+                        <li style="margin: 10px 0;"><a href="help.html#shipping-delivery">Shipping & Delivery</a></li>
+                    </ul>
+                    <ul style="list-style: none; padding: 0;">
+                        <li style="margin: 10px 0;"><a href="help.html#returns-exchanges">Returns & Exchanges</a></li>
+                        <li style="margin: 10px 0;"><a href="help.html#product-information">Product Information</a></li>
+                        <li style="margin: 10px 0;"><a href="help.html#gift-cards-vouchers">Gift Cards & Vouchers</a>
+                        </li>
+                        <li style="margin: 10px 0;"><a href="help.html#customer-support">Customer Support</a></li>
+                    </ul>
+                </div>
+                <p style="text-align: center; margin-top: 20px;">For detailed information, click here <a
+                        href="help.html">Help Center</a></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- T&C Modal -->
+    <div id="tncModal" class="modal" role="dialog" aria-labelledby="tncTitle" aria-hidden="true">
+        <div class="modal-content">
+            <h2 id="tncTitle">Terms & Conditions</h2>
+            <div class="modal-body">
+                <p style="font-size: 25px; margin-bottom: 20px;">Last updated: November 21 2024 </p>
+                <p style="font-size: 25px; margin-bottom: 20px;">
+                    By accessing and using our website, you agree to comply with
+                    and be bound by the following terms and conditions.
+                    Please read them carefully before using our services.
+                    If you do not agree with these terms, you may not use our website or services.</p>
+                <p style="text-align: center; margin-top: 20px;">For more information, click here <a href="tc.html"
+                        style="color: #0066cc; text-decoration: underline;">Terms & Conditions</a></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Sidebar -->
+    <aside id="mySidebar" class="sidebar">
+        <button class="close-btn" aria-label="Close Sidebar">×</button>
+        <div class="sidebar-content">
+            <div class="profile-section">
+                <img src="image/default_profilePIC.png" alt="Profile Picture" class="profile-img">
+                <h3 id="display-name">User Name</h3>
+            </div>
+            <nav style="font-size: 20px;margin-top: 10px;" class="sidebar-links">
+                <a href="main.html">Home</a>
+                <a href="profile.html">Profile</a>
+                <a href="car.html">Car Model</a>
+                <a href="accesories.html">Accessories</a>
+                <a href="merchandise.html">Merchandise</a>
+                <a href="settings.html">Settings</a>
+                <a href="#" id="logout-button">Logout</a>
+            </nav>
+        </div>
+    </aside>
+    <main>
+        <section class="products-section">
+            <h2 class="animated-text">Car Model</h2>
+            <div class="products-grid">
+                <!-- Product Cards -->
+                <div class="product-card">
+                    <img src="https://th.bing.com/th/id/OIP.cUHFE3qLRjptMwVE17BnowHaFE?w=1718&h=1176&rs=1&pid=ImgDetMain"
+                        alt="Product" class="product-image">
+                    <h3>Model S (Black)</h3>
+                    <p>$99.99</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <img src="https://hips.hearstapps.com/hmg-prod/images/2025-tesla-model-s-1-672d42e172407.jpg?crop=0.370xw:0.491xh;0.332xw,0.352xh&resize=768:*"
+                        alt="Product" class="product-image">
+                    <h3>Model S (White)</h3>
+                    <p>$99.99</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <img src="https://external-preview.redd.it/the-tesla-model-s-has-gone-from-game-changer-to-v0-R6tcbh_cU4PaKhj8FiiWyaG_JVPhIv2TkUUapDAc7Nc.jpg?auto=webp&s=9dd5d995a19d5ba8cc54268fba03e0e50bb6361a"
+                        alt="Product" class="product-image">
+                    <h3>Model S (Red)</h3>
+                    <p>$99.99</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <img src="https://v2charge.com/wp-content/uploads/2024/08/tesla-model-s-precio.jpg" alt="Product"
+                        class="product-image">
+                    <h3>Model S (Blue)</h3>
+                    <p>$99.99</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+
+
+                <div class="product-card">
+                    <img src="https://hips.hearstapps.com/hmg-prod/images/2024-tesla-model-3-long-range-rwd-132-66feb663ecf17.jpg?crop=0.702xw:0.592xh;0.143xw,0.391xh&resize=1200:*"
+                        alt="Model 3" class="product-image">
+                    <h3>Model 3 (Black)</h3>
+                    <p>$149.99</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/2019_Tesla_Model_3_Performance_AWD_Front.jpg/800px-2019_Tesla_Model_3_Performance_AWD_Front.jpg"
+                        alt="Model 3" class="product-image">
+                    <h3>Model 3 (White)</h3>
+                    <p>$149.99</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <img src="model3.png" alt="Model 3" class="product-image">
+                    <h3>Model 3 (Red)</h3>
+                    <p>$149.99</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <img src="https://www.edmunds.com/assets/m/cs/bltf2f4d0ddb400d35c/6621fc53c9de46f945d45c9d/2024_tesla_model-3-highland_front.jpg"
+                        alt="Model 3" class="product-image">
+                    <h3>Model 3 (Blue)</h3>
+                    <p>$149.99</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+
+
+
+                <div class="product-card">
+                    <img src="https://www.ecoticias.com/en/wp-content/uploads/2024/10/Tesla-Elon-Musk-Teslarati.jpg"
+                        alt="Product 3" class="product-image">
+                    <h3>Model X (Black)</h3>
+                    <p>$199.99</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <img src="https://th.bing.com/th/id/OIP.hueKj4ipbNdf-pdG_dt6xQHaE8?rs=1&pid=ImgDetMain"
+                        alt="Product 3" class="product-image">
+                    <h3>Model X (White)</h3>
+                    <p>$199.99</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <img src="https://static1.topspeedimages.com/wordpress/wp-content/uploads/2023/02/tesla-model-x-4.jpg"
+                        alt="Product 3" class="product-image">
+                    <h3>Model X (Red)</h3>
+                    <p>$199.99</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <img src="https://hips.hearstapps.com/hmg-prod/images/2025-tesla-model-x-6734b3d48460d.jpg"
+                        alt="Product 3" class="product-image">
+                    <h3>Model X (Blue)</h3>
+                    <p>$199.99</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+
+
+
+                <div class="product-card">
+                    <img src="https://cdn.prod.website-files.com/641a054f22dc4a26ac7a04b0/6650d9fa272e2e751917f73a_eyosias-g-WdtTIajKxrc-unsplash.webp"
+                        alt="Product 3" class="product-image">
+                    <h3>Model Y (Black)</h3>
+                    <p>$169.99</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <img src="https://www.moveelectric.com/sites/default/files/styles/slideshow_slide/public/cloned-files/00-Tesla%20model%20y%20render%20front-AC_0_16.jpg?itok=d8kjThmn"
+                        alt="Product 3" class="product-image">
+                    <h3>Model Y (White)</h3>
+                    <p>$169.99</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <img src="https://da4dkroembtou.cloudfront.net/wp-content/uploads/2023/07/2023-Tesla-Model-Y-4.jpg"
+                        alt="Product 3" class="product-image">
+                    <h3>Model Y (Red)</h3>
+                    <p>$169.99</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <img src="https://hips.hearstapps.com/hmg-prod/images/2020-tesla-model-y-long-range-101-1592842279.jpg?crop=0.590xw:0.499xh;0.319xw,0.364xh&resize=2048:*"
+                        alt="Product 3" class="product-image">
+                    <h3>Model Y (Grey)</h3>
+                    <p>$169.99</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Cart Dropdown -->
+        <div id="cartDropdown" class="section cart-dropdown" hidden="">
+            <h3>Your Cart</h3>
+            <ul id="cartItems">
+                <!-- Cart items will be dynamically added here -->
+            </ul>
+            <button class="checkout-btn">Checkout</button> <!-- Added class here -->
+        </div>
+    </main>
+    <!-- JavaScript -->
+    <script type="module" src="main.js"></script>
+</body>
+
+</html>

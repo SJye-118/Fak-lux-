@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Method</title>
+    <link rel="stylesheet" href="payment-method.css">
+
+</head>
+
+<body>
+
+    <div class="payment-methods-container">
+        <h2 class="animated-text" style="text-align: center;margin-bottom: 40px;font-size: 38px;">Select Payment Method
+        </h2>
+
+        <div class="payment-options">
+            <!-- Credit Card -->
+            <div class="payment-option" onclick="showPaymentForm('credit-card')">
+                <img src="https://th.bing.com/th/id/OIP.KlBttgn7P6cMRJSGWVJliwHaEK?rs=1&pid=ImgDetMain"
+                    alt="Credit Card">
+                <span>Credit Card</span>
+            </div>
+
+            <!-- PayPal -->
+            <div class="payment-option" onclick="showPaymentForm('paypal')">
+                <img src="https://pluspng.com/img-png/paypal-logotype-png-nternet-uzerinden-al-veri-yap-lmas-n-sa-layan-odeme-sistemi-paypal-turkiye-deki-faaliyetlerini-durdurdu-unu-ac-klad-bbc-turkce-nin-haberine-gore-740.png"
+                    alt="PayPal">
+                <span>PayPal</span>
+            </div>
+
+            <!-- Alipay -->
+            <div class="payment-option" onclick="showPaymentForm('alipay')">
+                <img src="https://download.logo.wine/logo/Alipay/Alipay-Logo.wine.png" alt="Alipay">
+                <span>Alipay</span>
+            </div>
+
+            <!-- Touch n Go -->
+            <div class="payment-option" onclick="showPaymentForm('tng')">
+                <img src="https://vectorise.net/logo/wp-content/uploads/2019/11/Logo-Touch-n-Go-eWallet.png"
+                    alt="Touch n Go">
+                <span>Touch n Go</span>
+            </div>
+        </div>
+
+        <!-- Payment Form Modal -->
+        <div id="payment-modal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal()">&times;</span>
+                <div id="payment-form-container">
+                    <!-- Payment form will be inserted here -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="payment-method.js"></script>
+</body>
+
+</html>

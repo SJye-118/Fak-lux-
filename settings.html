@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings</title>
+    <link rel="stylesheet" href="main.css">
+    <style>
+        /* Dark mode styles */
+        body.dark-mode {
+            background-color: #1a1a1a;
+            color: #ffffff;
+        }
+
+        body.dark-mode .settings-section {
+            background: #2d2d2d;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        body.dark-mode .setting-description {
+            color: #b0b0b0;
+        }
+
+        body.dark-mode .settings-group h3 {
+            color: #ffffff;
+            border-bottom: 1px solid #404040;
+        }
+
+        .settings-container {
+            max-width: 800px;
+            margin: 80px auto 20px;
+            padding: 20px;
+        }
+
+        .settings-section {
+            background: white;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .settings-group {
+            margin-bottom: 25px;
+        }
+
+        .settings-group h3 {
+            color: #333;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .setting-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 0;
+            border-bottom: 1px solid #f5f5f5;
+        }
+
+        .setting-item:last-child {
+            border-bottom: none;
+        }
+
+        .setting-label {
+            flex: 1;
+        }
+
+        .setting-description {
+            color: #666;
+            font-size: 0.9em;
+            margin-top: 5px;
+        }
+
+        .setting-control {
+            margin-left: 20px;
+        }
+
+        .toggle-switch {
+            position: relative;
+            display: inline-block;
+            width: 60px;
+            height: 34px;
+        }
+
+        .toggle-switch input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+
+        .slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #ccc;
+            transition: .4s;
+            border-radius: 34px;
+        }
+
+        .slider:before {
+            position: absolute;
+            content: "";
+            height: 26px;
+            width: 26px;
+            left: 4px;
+            bottom: 4px;
+            background-color: white;
+            transition: .4s;
+            border-radius: 50%;
+        }
+
+        input:checked+.slider {
+            background-color: #333;
+        }
+
+        input:checked+.slider:before {
+            transform: translateX(26px);
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Top Navigation Bar -->
+    <nav class="top-nav">
+        <button class="menu-btn" aria-label="Toggle Sidebar">☰</button>
+        <div class="right-nav">
+            <h3 style="color: white;font-family: garamond;">Fakéluxé</h3>
+        </div>
+    </nav>
+
+    <!-- Sidebar -->
+    <aside id="mySidebar" class="sidebar">
+        <button class="close-btn" aria-label="Close Sidebar">×</button>
+        <div class="sidebar-content">
+            <div class="profile-section">
+                <img src="image/default_profilePIC.png" alt="Profile Picture" class="profile-img">
+                <h3 id="display-name">User Name</h3>
+            </div>
+            <nav style="font-size: 20px;margin-top: 10px;" class="sidebar-links">
+                <a href="main.html">Home</a>
+                <a href="profile.html">Profile</a>
+                <a href="car.html">Car Model</a>
+                <a href="accesories.html">Accessories</a>
+                <a href="merchandise.html">Merchandise</a>
+                <a href="settings.html">Settings</a>
+                <a href="#" id="logout-button">Logout</a>
+            </nav>
+        </div>
+    </aside>
+
+    <div class="settings-container">
+        <div class="settings-section">
+            <div class="settings-group">
+                <h2>Account Settings</h2>
+                <div class="setting-item">
+                    <div class="setting-label">
+                        <h4>Change Password</h4>
+                        <p class="setting-description">Update your account password</p>
+                    </div>
+                    <div class="setting-control">
+                        <button id="changePasswordBtn">Change</button>
+                    </div>
+                </div>
+                <div class="setting-item">
+                    <div class="setting-label">
+                        <h4>Email Notifications</h4>
+                        <p class="setting-description">Receive email updates about your orders</p>
+                    </div>
+                    <div class="setting-control">
+                        <label class="toggle-switch">
+                            <input type="checkbox" id="emailNotifications" checked>
+                            <span class="slider"></span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="settings-section">
+            <div class="settings-group">
+                <h2>Privacy Settings</h2>
+                <div class="setting-item">
+                    <div class="setting-label">
+                        <h4>Profile Visibility</h4>
+                        <p class="setting-description">Make your profile visible to other users</p>
+                    </div>
+                    <div class="setting-control">
+                        <label class="toggle-switch">
+                            <input type="checkbox" id="profileVisibility">
+                            <span class="slider"></span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="settings-section">
+            <div class="settings-group">
+                <h2>Display Settings</h2>
+                <div class="setting-item">
+                    <div class="setting-label">
+                        <h4>Dark Mode</h4>
+                        <p class="setting-description">Switch between light and dark theme</p>
+                    </div>
+                    <div class="setting-control">
+                        <label class="toggle-switch">
+                            <input type="checkbox" id="darkModeToggle">
+                            <span class="slider"></span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Sidebar functionality
+        const menuBtn = document.querySelector('.menu-btn');
+        const sidebar = document.getElementById('mySidebar');
+        const closeBtn = document.querySelector('.close-btn');
+
+        menuBtn.addEventListener('click', () => {
+            sidebar.classList.add('active');
+        });
+
+        closeBtn.addEventListener('click', () => {
+            sidebar.classList.remove('active');
+        });
+
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const menuBtn = document.querySelector('.menu-btn');
+            const sidebar = document.getElementById('mySidebar');
+            const closeBtn = document.querySelector('.close-btn');
+
+            if (menuBtn) {
+                menuBtn.addEventListener('click', () => {
+                    sidebar.classList.add('active');
+                });
+            }
+
+            if (closeBtn) {
+                closeBtn.addEventListener('click', () => {
+                    sidebar.classList.remove('active');
+                });
+            }
+        });
+
+        document.getElementById('emailNotifications').addEventListener('change', function () {
+            const isEnabled = this.checked;
+            // Save to user preferences in your database or localStorage
+            localStorage.setItem('emailNotifications', isEnabled);
+        });
+
+        document.getElementById('profileVisibility').addEventListener('change', function () {
+            const isVisible = this.checked;
+            // Save to user preferences in your database or localStorage
+            localStorage.setItem('profileVisibility', isVisible);
+        });
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const darkModeToggle = document.getElementById('darkModeToggle');
+
+            // Check for saved dark mode preference
+            const isDarkMode = localStorage.getItem('darkMode') === 'true';
+
+            // Set initial state
+            if (isDarkMode) {
+                document.body.classList.add('dark-mode');
+                darkModeToggle.checked = true;
+            }
+
+            // Handle toggle changes
+            darkModeToggle.addEventListener('change', function () {
+                if (this.checked) {
+                    document.body.classList.add('dark-mode');
+                    localStorage.setItem('darkMode', 'true');
+                } else {
+                    document.body.classList.remove('dark-mode');
+                    localStorage.setItem('darkMode', 'false');
+                }
+            });
+        });
+
+        // Logout functionality
+        const signOutUser = async () => {
+            try {
+                await signOut(auth);
+                // Clear any user-specific data from localStorage
+                localStorage.removeItem('cartState');
+                localStorage.removeItem(`orderHistory_${auth.currentUser?.uid}`);
+                // Redirect to login page
+                window.location.href = 'authentication/login.html';
+            } catch (error) {
+                console.error('Error signing out:', error);
+                alert('Error signing out. Please try again.');
+            }
+        };
+
+        // Update the logout button listener
+        document.addEventListener('DOMContentLoaded', () => {
+            const logoutButton = document.getElementById('logout-button');
+
+            if (logoutButton) {
+                logoutButton.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    signOutUser();
+                });
+            }
+        });
+
+    </script>
+</body>
+
+</html>

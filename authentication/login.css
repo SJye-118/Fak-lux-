@@ -1,0 +1,174 @@
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #333 50%, #f5f5f5 50%);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #333;
+}
+
+.login-container {
+    background-color: white;
+    border-radius: 12px;
+    padding: 40px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+    width: 350px;
+    box-sizing: border-box;
+    position: relative;
+    overflow: hidden;
+}
+
+.login-container::before {
+    content: '';
+    position: absolute;
+    top: -50px;
+    right: -50px;
+    width: 150px;
+    height: 150px;
+    background-color: #333;
+    border-radius: 50%;
+    opacity: 0.1;
+    z-index: -1;
+}
+
+.login-container::after {
+    content: '';
+    position: absolute;
+    bottom: -50px;
+    left: -50px;
+    width: 150px;
+    height: 150px;
+    background-color: #333;
+    border-radius: 50%;
+    opacity: 0.1;
+    z-index: -1;
+}
+
+h2 {
+    text-align: center;
+    font-size: 28px;
+    font-weight: bold;
+    background: linear-gradient(90deg, #333, #555);
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    letter-spacing: 1.5px;
+}
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+label {
+    font-size: 14px;
+    color: #333;
+    display: block;
+    margin-bottom: 8px;
+}
+
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 12px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
+    color: #333;
+    background-color: #fafafa;
+    transition: border-color 0.3s;
+}
+
+input[type="email"]:focus,
+input[type="password"]:focus {
+    border-color: #333;
+    outline: none;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+button:hover {
+    background-color: #555;
+    transform: translateY(-2px);
+}
+
+.footer-links {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 14px;
+    color: #333;
+}
+
+.footer-links a {
+    color: #333;
+    text-decoration: none;
+    margin: 0 10px;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.footer-links a:hover {
+    color: #555;
+}
+
+.guest-option {
+    position: absolute;
+    top: 20px; 
+    right: 30px; 
+    font-size: 20px; 
+    font-weight: bold;
+    font-family: Arial, sans-serif;
+    display: flex;
+    align-items: center;
+    gap: 8px; 
+    z-index: 1000; 
+    cursor: pointer; 
+}
+
+.guest-option a {
+    color: #333; 
+    text-decoration: none;
+    transition: color 0.3s, transform 0.2s; 
+}
+
+.guest-option a:hover {
+    color: #555; 
+    transform: scale(1.05); 
+}
+
+.guest-option i {
+    font-size: 24px;
+    color: #555;
+    transition: color 0.3s;
+}
+
+.guest-option:hover i {
+    color: #777; 
+}
+
+.guest-icon {
+    width: 24px;
+    height: 24px;
+    transition: transform 0.3s; 
+}
+
+.guest-option:hover .guest-icon {
+    transform: scale(1.1); 
+}
