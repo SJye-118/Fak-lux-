@@ -2,8 +2,6 @@
 
 ## An E-commerce website
 
-<h1>E-commerce Website</h1>
-
 <p>This project is an e-commerce website with the following features:</p>
 
 <ul>
